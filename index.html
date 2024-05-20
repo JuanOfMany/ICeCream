@@ -5,53 +5,86 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ice Cream</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="../css/styles.css" />
 </head>
 
 <body>
     <form>
-        <div class="row">
+        <div class="row mt-5">
             <div class="col d-flex justify-content-center">
-                <span>Number of scoops</span>
-                <input type="number">
+                <span class="me-3">Number of scoops</span>
+                <input type="number" id="numOfScoops">
             </div>
             <div class="row">
-                <div class="col d-flex justify-content-center">
-                    <input type="radio">
-                    <span>Cone</span>
-                </div>
-                <div class="col d-flex justify-content-center">
-                    <input type="radio">
-                    <span>Cup</span>
-                </div>
-            </div>
-            <div class="row">
-                <span>Toppings</span>
-                <div class="col d-flex justify-content-center" style="border-style:solid">
-                    <div class="row">
-                        <input type="checkbox">
-                        <span>Sprinkles ($.50)</span>
-                        <input type="checkbox">
-                        <span>Whipped Cream ($.25)</span>
+                <div class="col d-flex justify-content-center mt-3">
+                    <div>
+                        <input type="radio" id="cone" name="cupOrCone" required>
+                        <span>Cone</span>
                     </div>
-                    <div class="row">
-                        <input type="checkbox">
-                        <span>Hot Fudge ($1.25)</span>
-                        <input type="checkbox">
-                        <span>Cherry ($.25)</span>
+                    <div class="ms-3">
+                        <input type="radio" id="cup" name="cupOrCone" required>
+                        <span>Cup</span>
                     </div>
+
                 </div>
             </div>
             <div class="row">
-                <button class="btn" type="submit">Submit Order</button>
+                <div class="col"></div>
+                <div class="col-7" id="toppings" style="display: none;">
+                    <span>Toppings</span>
+                    <div class="p-3" style="border-style:solid">
+                        <div class="col d-flex justify-content-center" >
+                            <div class="row">
+                                <div class="col">
+                                    <label class="form-check-label">Sprinkles ($.50)</label>
+                                    <input type="checkbox" id="sprinkles">
+                                </div>
+                                <div class="col">
+                                    <label class="form-check-label">Whipped Cream ($.25)</label>
+                                    <input type="checkbox" id="whippedCream">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col d-flex justify-content-center" >
+                            <div class="row">
+                                <div class="col">
+                                    <label class="form-check-label">Hot Fudge ($1.25)</label>
+                                    <input type="checkbox" id="hotFudge">
+                                </div>
+                                <div class="col">
+                                    <label class="form-check-label">Cherry ($.25)</label>
+                                    <input type="checkbox" id="cherry">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col"></div>
+
+
+            </div>
+            <div class="row justify-content-center mt-4">
+                <button class="btn" type="submit" id="submit">Submit Order</button>
             </div>
     </form>
-    <div class="row">
+    <div class="row mt-4">
         <div class="col d-flex justify-content-center">
-            <span>Base Price:</span>
-            <span>Tax:</span>
-            <span>Total Due:</span>
+            <div class="row">
+                <span>Base Price:</span>
+            </div>
+            <div class="row">
+                <span>Tax:</span>
+            </div>
+            <div class="row">
+                <span>Total Due:</span>
+            </div>
         </div>
     </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous">
+        </script>
+    <script src="../scripts/index.js"></script>
 </body>
-
 </html>
