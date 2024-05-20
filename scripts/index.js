@@ -15,7 +15,9 @@ function handleCup(event) {
 }
 
 function handleNumOfScoops(event) {
-    if (event.target.value)
+    if (event.target.value) {
+        console.log(event.target.value)
+    }
 }
 
 let total = 0;
